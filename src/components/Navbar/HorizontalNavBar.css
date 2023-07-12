@@ -1,0 +1,34 @@
+.horizontal-navbar-container {
+	position: relative;
+	overflow: hidden;
+	width: max-content;
+}
+.horizontal-navbar {
+	display: flex;
+}
+.horizontal-navbar::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	height: 3px;
+}
+.section {
+	flex-shrink: 0;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.section.active {
+	color: purple;
+}
+
+.highlight-line {
+	position: absolute;
+	bottom: 0;
+	height: 3px;
+	background-color: purple;
+	transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+}

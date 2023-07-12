@@ -1,0 +1,50 @@
+.categories-scroll {
+	display: flex;
+	overflow-x: auto;
+	overflow-y: clip;
+}
+
+.items::--webkit-scrollbar {
+	width: 0;
+	background-color: transparent;
+}
+.items {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+.scrollable__container {
+	max-width: 600px;
+	margin: auto;
+}
+.items {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+	cursor: pointer;
+	& * > * {
+		margin-left: 20px;
+	}
+}
+.categories-scroll,
+.items {
+	display: flex;
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding: 10px;
+	cursor: pointer;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	.card {
+		margin-right: 20px;
+	}
+}
+
+.scrollable__container {
+	max-width: 600px;
+	margin: auto;
+}
